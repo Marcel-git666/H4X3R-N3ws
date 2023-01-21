@@ -10,6 +10,7 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     @Published var posts = [Post]()
+    @Published var array = [Int]()
     
     func fetchData() {
         if let url = URL(string: "https://hacker-news.firebaseio.com/v0/beststories.json") {
@@ -21,8 +22,11 @@ class NetworkManager: ObservableObject {
                         do {
                             let decodedData = try decoder.decode([Int].self, from: safeData)
                             //self.posts = decodedData
+                            self.array = decodedData
                             for data in decodedData {
-                                self.fetchArticle(data)
+                                
+                                    self.fetchArticle(data)
+                                
                             }
                             
                         } catch {

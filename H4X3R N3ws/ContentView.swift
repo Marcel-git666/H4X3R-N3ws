@@ -13,11 +13,13 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(networkManager.posts) { post in
+            List {
+                ForEach(networkManager.array, id: \.self) { post in
                     HStack {
-                        Text(post.id)
-                        Text(post.title)
+                        Text(post.description)
+                        
                     }
+                }
             }
             .navigationBarTitle("H4X3R N3ws")
         }
