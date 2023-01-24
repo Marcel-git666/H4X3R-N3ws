@@ -24,9 +24,9 @@ struct Result: Decodable {
 //    "url" : "http://www.getdropbox.com/u/2/screencast.html"
 //}
 
-struct Post: Decodable, Identifiable {
-    let id: String
+struct Post: Decodable, Hashable, Identifiable {
+    let id: Int
     let title: String
-    let score: String
+    let score: Int
     let url: String
 }

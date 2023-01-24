@@ -14,9 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(networkManager.array, id: \.self) { post in
+                ForEach(networkManager.posts, id: \.self) { post in
                     HStack {
-                        Text(post.description)
+                        Text(post.title)
                         
                     }
                 }

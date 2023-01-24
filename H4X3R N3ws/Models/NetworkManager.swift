@@ -10,7 +10,7 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     @Published var posts = [Post]()
-    @Published var array = [Int]()
+    var array = [Int]()
     
     func fetchData() {
         if let url = URL(string: "https://hacker-news.firebaseio.com/v0/beststories.json") {
