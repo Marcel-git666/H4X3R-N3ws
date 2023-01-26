@@ -28,5 +28,5 @@ struct Post: Decodable, Hashable, Identifiable {
     let id: Int
     let title: String
     let score: Int
-    let url: String
+    let url: String?
 }

@@ -21,8 +21,9 @@ class NetworkManager: ObservableObject {
                     if let safeData = data  {
                         do {
                             let decodedData = try decoder.decode([Int].self, from: safeData)
-                            //self.posts = decodedData
-                            self.array = decodedData
+                            DispatchQueue.main.async {
+                                self.array = decodedData
+                            }
                             for data in decodedData {
                                 
                                     self.fetchArticle(data)
@@ -42,7 +43,6 @@ class NetworkManager: ObservableObject {
     
     func fetchArticle(_ article: Int) {
         let pathToArcticle = "https://hacker-news.firebaseio.com/v0/item/\(article).json"
-        print(pathToArcticle)
         if let url = URL(string: pathToArcticle) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, response, error in
@@ -51,8 +51,9 @@ class NetworkManager: ObservableObject {
                     if let safeData = data  {
                         do {
                             let decodedData = try decoder.decode(Post.self, from: safeData)
-                            self.posts.append(decodedData)
-                            
+                            DispatchQueue.main.async {
+                                self.posts.append(decodedData)
+                            }
                         } catch {
                             print("fetchArticle Error")
                             print(error.localizedDescription)

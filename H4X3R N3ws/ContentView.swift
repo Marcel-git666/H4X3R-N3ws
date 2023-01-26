@@ -16,6 +16,7 @@ struct ContentView: View {
             List {
                 ForEach(networkManager.posts, id: \.self) { post in
                     HStack {
+                        Text("\(post.score)")
                         Text(post.title)
                         
                     }
