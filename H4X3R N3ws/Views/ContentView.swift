@@ -15,11 +15,14 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(networkManager.posts, id: \.self) { post in
-                    HStack {
-                        Text("\(post.score)")
-                        Text(post.title)
-                        
+                    NavigationLink(destination: DetailView(url: post.url)) {
+                        HStack {
+                            Text("\(post.score)")
+                            Text(post.title)
+                            
+                        }
                     }
+                    
                 }
             }
             .navigationBarTitle("H4X3R N3ws")
