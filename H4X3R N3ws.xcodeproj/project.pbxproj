@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2B85A22982B79E002CD338 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B85A12982B79E002CD338 /* DetailView.swift */; };
 		1F81CF5B297B1B4E00D47F06 /* H4X3R_N3wsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF5A297B1B4E00D47F06 /* H4X3R_N3wsApp.swift */; };
 		1F81CF5D297B1B4E00D47F06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF5C297B1B4E00D47F06 /* ContentView.swift */; };
 		1F81CF5F297B1B5000D47F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F81CF5E297B1B5000D47F06 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F2B85A12982B79E002CD338 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1F81CF57297B1B4E00D47F06 /* H4X3R N3ws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H4X3R N3ws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F81CF5A297B1B4E00D47F06 /* H4X3R_N3wsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4X3R_N3wsApp.swift; sourceTree = "<group>"; };
 		1F81CF5C297B1B4E00D47F06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2B85A02982B777002CD338 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F81CF5C297B1B4E00D47F06 /* ContentView.swift */,
+				1F2B85A12982B79E002CD338 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1F81CF4E297B1B4E00D47F06 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				1F81CF5A297B1B4E00D47F06 /* H4X3R_N3wsApp.swift */,
-				1F81CF5C297B1B4E00D47F06 /* ContentView.swift */,
+				1F2B85A02982B777002CD338 /* Views */,
 				1F81CF68297B275D00D47F06 /* Models */,
 				1F81CF5E297B1B5000D47F06 /* Assets.xcassets */,
 				1F81CF60297B1B5000D47F06 /* Preview Content */,
@@ -154,6 +165,7 @@
 				1F81CF6A297B276F00D47F06 /* NetworkManager.swift in Sources */,
 				1F81CF6C297B367F00D47F06 /* PostData.swift in Sources */,
 				1F81CF5D297B1B4E00D47F06 /* ContentView.swift in Sources */,
+				1F2B85A22982B79E002CD338 /* DetailView.swift in Sources */,
 				1F81CF5B297B1B4E00D47F06 /* H4X3R_N3wsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
